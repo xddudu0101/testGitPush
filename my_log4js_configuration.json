@@ -1,0 +1,29 @@
+{
+  "appenders": [
+    {
+      "type": "console",
+      "category": "console"
+    },
+    {
+      "type": "file",
+      "filename": "logs/log_file_FileLog.log",
+      "maxLogSize": 20480,
+      "backups": 3,
+      "category": "FileLog"
+    },
+    {
+      "type": "dateFile",
+      "filename": "D:/log4js-logs",
+      "pattern": "log_file-yyyy-MM-dd-hh.log",
+      "absolute": true,
+      "alwaysIncludePattern": true,
+      "maxLogSize": 20480,
+      "category": "dateFileLog"
+    }
+  ],
+  "replaceConsole": true,
+  "levels":{
+    "FileLog":"debug",
+    "dateFileLog": "debug"
+  }
+}
